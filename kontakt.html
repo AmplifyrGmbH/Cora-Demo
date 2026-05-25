@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt – CORA Immobilien</title>
+  <meta name="description" content="Nehmen Sie Kontakt mit CORA Immobilien auf – Termin buchen oder Formular ausfüllen." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="Bilder/Logo transparent.png" alt="CORA Immobilien" />
+      </a>
+      <div class="nav__links">
+        <a href="bewirtschaftung.html" class="nav__link">Bewirtschaftung</a>
+        <a href="vermietung.html" class="nav__link">Vermietung</a>
+        <a href="verkauf.html" class="nav__link">Verkauf</a>
+        <a href="beratung.html" class="nav__link">Beratung</a>
+        <a href="freelance.html" class="nav__link">Freelance</a>
+        <a href="team.html" class="nav__link">Team</a>
+        <a href="kontakt.html" class="nav__contact active">Kontakt</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="navMobile">
+      <a href="bewirtschaftung.html" class="nav__link">Bewirtschaftung</a>
+      <a href="vermietung.html" class="nav__link">Vermietung</a>
+      <a href="verkauf.html" class="nav__link">Verkauf</a>
+      <a href="beratung.html" class="nav__link">Beratung</a>
+      <a href="freelance.html" class="nav__link">Freelance</a>
+      <a href="team.html" class="nav__link">Team</a>
+      <a href="kontakt.html" class="nav__link" style="font-weight:700;color:var(--black)">Kontakt</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Compact Hero -->
+    <section class="kontakt-hero">
+      <div class="kontakt-hero__bg" style="background-image: url('Bilder/hero-contact.avif')"></div>
+      <div class="kontakt-hero__overlay"></div>
+      <div class="kontakt-hero__inner">
+        <h1 class="kontakt-hero__title">Sprechen wir miteinander.</h1>
+        <p class="kontakt-hero__sub">Persönlich, ehrlich und ohne Umwege.</p>
+      </div>
+    </section>
+
+    <!-- Zwei Optionen -->
+    <div class="kontakt-options">
+
+      <!-- Option 1: Termin buchen -->
+      <div class="kontakt-option">
+        <div class="kontakt-option__label">Option 01</div>
+        <div class="kontakt-option__title">Direkt einen Termin buchen</div>
+        <p class="kontakt-option__text">
+          Wählen Sie einen freien Termin und sprechen Sie direkt mit uns –
+          telefonisch oder vor Ort. Unkompliziert und ohne Wartezeit.
+        </p>
+
+        <div class="termin-card">
+          <div class="termin-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/>
+            </svg>
+          </div>
+          <div>
+            <div style="font-size:0.95rem;font-weight:600;color:var(--black);margin-bottom:0.25rem">Online-Termin buchen</div>
+            <div style="font-size:0.85rem;color:var(--gray-600)">Ersatgespräch · 30 Minuten · Zoom oder Telefon</div>
+          </div>
+          <a href="tel:+41796436170" class="btn">
+            Termin vereinbaren <span class="arrow">→</span>
+          </a>
+        </div>
+
+        <div class="termin-info">
+          <div class="termin-info__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+            </svg>
+            <span><strong style="color:var(--black)">Telefon</strong> — <a href="tel:+41796436170">+41 79 643 61 70</a></span>
+          </div>
+          <div class="termin-info__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+            </svg>
+            <span><strong style="color:var(--black)">E-Mail</strong> — <a href="mailto:info@cora-immobilien.ch">info@cora-immobilien.ch</a></span>
+          </div>
+          <div class="termin-info__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span>Mo – Fr, 08:00 – 17:30 Uhr</span>
+          </div>
+          <div class="termin-info__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+            </svg>
+            <span>Im Rüteli 13B, 5405 Dättwil</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Option 2: Kontaktformular -->
+      <div class="kontakt-option">
+        <div class="kontakt-option__label">Option 02</div>
+        <div class="kontakt-option__title">Kontaktformular ausfüllen</div>
+        <p class="kontakt-option__text">
+          Schildern Sie uns Ihr Anliegen – wir melden uns innert 24 Stunden bei Ihnen.
+        </p>
+
+        <form class="contact-form" action="mailto:info@cora-immobilien.ch" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="vorname">Vorname *</label>
+              <input type="text" id="vorname" name="vorname" placeholder="Max" required />
+            </div>
+            <div class="form-group">
+              <label for="nachname">Nachname *</label>
+              <input type="text" id="nachname" name="nachname" placeholder="Mustermann" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">E-Mail *</label>
+              <input type="email" id="email" name="email" placeholder="max@mustermann.ch" required />
+            </div>
+            <div class="form-group">
+              <label for="telefon">Telefon</label>
+              <input type="tel" id="telefon" name="telefon" placeholder="+41 79 000 00 00" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="anliegen">Anliegen</label>
+            <select id="anliegen" name="anliegen">
+              <option value="" disabled selected>Bitte wählen …</option>
+              <option value="bewirtschaftung">Bewirtschaftung</option>
+              <option value="vermietung">Vermietung</option>
+              <option value="verkauf">Verkauf</option>
+              <option value="beratung">Beratung & Bauherrenvertretung</option>
+              <option value="freelance">Freelance & Stellvertretung</option>
+              <option value="sonstiges">Sonstiges</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="nachricht">Nachricht *</label>
+            <textarea id="nachricht" name="nachricht" placeholder="Beschreiben Sie kurz Ihr Anliegen …" required></textarea>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-top:0.5rem">
+            <span style="font-size:0.8rem;color:var(--gray-400)">* Pflichtfelder</span>
+            <button type="submit" class="btn btn--filled">Nachricht senden <span class="arrow">→</span></button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div>
+          <div class="footer__brand-name">CORA Immobilien</div>
+          <p class="footer__brand-text">Persönliches Immobilienmanagement mit Erfahrung, Ehrlichkeit und Engagement – für Eigentümer und Mieter in der ganzen Schweiz.</p>
+        </div>
+        <div>
+          <div class="footer__col-title">Leistungen</div>
+          <div class="footer__col-links">
+            <a href="bewirtschaftung.html" class="footer__col-link">Bewirtschaftung</a>
+            <a href="vermietung.html" class="footer__col-link">Vermietung</a>
+            <a href="verkauf.html" class="footer__col-link">Verkauf</a>
+            <a href="beratung.html" class="footer__col-link">Beratung</a>
+            <a href="freelance.html" class="footer__col-link">Freelance</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Unternehmen</div>
+          <div class="footer__col-links">
+            <a href="team.html" class="footer__col-link">Team</a>
+            <a href="kontakt.html" class="footer__col-link">Kontakt</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Kontakt</div>
+          <div class="footer__col-links">
+            <span class="footer__col-link" style="cursor:default">Im Rüteli 13B, 5405 Dättwil</span>
+            <a href="tel:+41796436170" class="footer__col-link">+41 79 643 61 70</a>
+            <a href="mailto:info@cora-immobilien.ch" class="footer__col-link">info@cora-immobilien.ch</a>
+          </div>
+        </div>
+      </div>
+      <div style="padding:1.75rem 0;border-top:1px solid rgba(0,0,0,0.08);border-bottom:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap">
+        <span style="font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray-400)">Mitgliedschaften & Partner</span>
+        <div style="display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap">
+          <img src="Bilder/logo-svit.svg" alt="SVIT Aargau" style="height:36px;opacity:0.55;filter:grayscale(100%)" />
+          <img src="Bilder/logo-propbase.png" alt="PropBase" style="height:32px;opacity:0.55;filter:grayscale(100%)" />
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2025 CORA Immobilien GmbH. Alle Rechte vorbehalten.</span>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Impressum</a>
+          <a href="#" class="footer__legal-link">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.querySelector('.nav');
+    const toggle = document.getElementById('navToggle');
+    const mobile = document.getElementById('navMobile');
+    function updateNav() {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      mobile.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
