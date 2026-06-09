@@ -7,6 +7,12 @@
   <meta name="description" content="CORA Immobilien bietet professionelles Immobilienmanagement in der Schweiz – persönlich, ehrlich und kompetent. Bewirtschaftung, Vermietung, Verkauf und Beratung." />
   <link rel="preload" href="Bilder/hero-startseite.jpg" as="image" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    @media (max-width: 768px) {
+      .hero-full__bg { background-image: url('Bilder/hero-startseite-mobile.jpg') !important; }
+      .bild-zitat-bg { background-image: url('Bilder/bild-zitat-heimat-mobile.jpg') !important; }
+    }
+  </style>
 </head>
 <body>
 
@@ -150,7 +156,7 @@
 
     <!-- Philosophie -->
     <section style="position:relative;overflow:hidden;padding:var(--spacing-lg) 0">
-      <div style="position:absolute;inset:0;background-image:url('Bilder/bild-zitat-heimat.jpg');background-size:cover;background-position:center;filter:grayscale(15%) brightness(0.7)"></div>
+      <div class="bild-zitat-bg" style="position:absolute;inset:0;background-image:url('Bilder/bild-zitat-heimat.jpg');background-size:cover;background-position:center;filter:grayscale(15%) brightness(0.7)"></div>
       <div style="position:absolute;inset:0;background:rgba(0,0,0,0.15)"></div>
       <div class="container" style="position:relative;z-index:1">
         <div style="max-width:800px;margin:0 auto;text-align:center">
