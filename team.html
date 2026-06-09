@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Team – CORA Immobilien</title>
   <meta name="description" content="Lernen Sie das Team hinter CORA Immobilien kennen – erfahren, persönlich und leidenschaftlich für Immobilien." />
+  <link rel="preload" href="Bilder/hero-team.jpg" as="image" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -34,8 +35,8 @@
       <a href="verkauf.html" class="nav__link">Verkauf</a>
       <a href="beratung.html" class="nav__link">Beratung</a>
       <a href="freelance.html" class="nav__link">Freelance</a>
-      <a href="team.html" class="nav__link">Team</a>
-      <a href="kontakt.html" class="nav__link" style="font-weight:700;color:var(--black)">Kontakt</a>
+      <a href="team.html" class="nav__link active">Team</a>
+      <a href="kontakt.html" class="nav__link">Kontakt</a>
     </div>
   </nav>
 
@@ -51,8 +52,8 @@
           Persönlichkeit und Fachwissen gehen bei uns Hand in Hand.
         </p>
         <div class="page-hero-full__actions">
-          <a href="kontakt.html" class="btn btn--filled">Kontakt aufnehmen <span class="arrow">→</span></a>
-          <a href="#team" style="font-size:0.85rem;font-weight:500;color:var(--gray-500);border-bottom:1px solid var(--gray-300);padding-bottom:1px">Team kennenlernen</a>
+          <a href="#team" class="btn btn--filled">Team kennenlernen <span class="arrow">→</span></a>
+          <a href="kontakt.html" style="font-size:0.85rem;font-weight:500;color:var(--gray-500);border-bottom:1px solid var(--gray-300);padding-bottom:1px">Kontakt aufnehmen</a>
         </div>
       </div>
       <div class="page-hero-split__right" style="background-image: url('Bilder/hero-team.jpg')"></div>
@@ -78,7 +79,7 @@
     </section>
 
     <!-- Team Profiles -->
-    <section class="section">
+    <section class="section" id="team">
       <div class="container">
         <div class="section__header section__header--center">
           <div class="label section__label">Das Team</div>
@@ -90,7 +91,7 @@
           <!-- Maxie -->
           <div class="team-member-detail">
             <div class="team-member-detail__photo">
-              <img src="Bilder/Maxie.png" alt="Maxie Kücük-Richter" style="object-position: 25% center;" />
+              <img src="Bilder/Maxie.jpg" alt="Maxie Kücük-Richter" style="object-position: 25% center;" loading="lazy" />
             </div>
             <div class="team-member-detail__content">
               <h2 class="team-member-detail__name">Maxie Kücük-Richter</h2>
@@ -139,7 +140,7 @@
           <!-- Thierry -->
           <div class="team-member-detail">
             <div class="team-member-detail__photo">
-              <img src="Bilder/Thierry.png" alt="Thierry Gmerek" />
+              <img src="Bilder/Thierry.jpg" alt="Thierry Gmerek" loading="lazy" />
             </div>
             <div class="team-member-detail__content">
               <h2 class="team-member-detail__name">Thierry Gmerek</h2>
@@ -187,7 +188,7 @@
           <!-- Fabienne -->
           <div class="team-member-detail">
             <div class="team-member-detail__photo">
-              <img src="Bilder/Fabienne.jpg" alt="Fabienne Vis" style="object-position: 25% center;" />
+              <img src="Bilder/Fabienne.jpg" alt="Fabienne Vis" style="object-position: 25% center;" loading="lazy" />
             </div>
             <div class="team-member-detail__content">
               <h2 class="team-member-detail__name">Fabienne Vis</h2>
@@ -286,8 +287,8 @@
       <div style="padding:1.75rem 0;border-top:1px solid rgba(0,0,0,0.08);border-bottom:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap">
         <span style="font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray-400)">Mitgliedschaften & Partner</span>
         <div style="display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap">
-          <img src="Bilder/logo-svit.svg" alt="SVIT Aargau" style="height:36px;opacity:0.55;filter:grayscale(100%)" />
-          <img src="Bilder/logo-propbase.png" alt="PropBase" style="height:32px;opacity:0.55;filter:grayscale(100%)" />
+          <img src="Bilder/logo-svit.svg" alt="SVIT Aargau" style="height:36px;opacity:0.55;filter:grayscale(100%)" loading="lazy" />
+          <img src="Bilder/logo-propbase.png" alt="PropBase" style="height:32px;opacity:0.55;filter:grayscale(100%)" loading="lazy" />
         </div>
       </div>
       <div class="footer__bottom">
@@ -312,6 +313,12 @@
     toggle.addEventListener('click', () => {
       toggle.classList.toggle('open');
       mobile.classList.toggle('open');
+    });
+    mobile.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        mobile.classList.remove('open');
+      });
     });
   </script>
 </body>

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Freelance & Stellvertretung – CORA Immobilien</title>
   <meta name="description" content="Kurzfristige Verstärkung für Immobilienteams – CORA Immobilien übernimmt Stellvertretungen bei Vakanzen, Mutterschaftsurlaub oder Personalengpässen." />
+  <link rel="preload" href="Bilder/hero-freelance.jpg" as="image" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body style="background:var(--gray-50)">
@@ -33,9 +34,9 @@
       <a href="vermietung.html" class="nav__link">Vermietung</a>
       <a href="verkauf.html" class="nav__link">Verkauf</a>
       <a href="beratung.html" class="nav__link">Beratung</a>
-      <a href="freelance.html" class="nav__link">Freelance</a>
+      <a href="freelance.html" class="nav__link active">Freelance</a>
       <a href="team.html" class="nav__link">Team</a>
-      <a href="kontakt.html" class="nav__link" style="font-weight:700;color:var(--black)">Kontakt</a>
+      <a href="kontakt.html" class="nav__link">Kontakt</a>
     </div>
   </nav>
 
@@ -186,8 +187,8 @@
       <div style="padding:1.75rem 0;border-top:1px solid rgba(0,0,0,0.08);border-bottom:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap">
         <span style="font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray-400)">Mitgliedschaften & Partner</span>
         <div style="display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap">
-          <img src="Bilder/logo-svit.svg" alt="SVIT Aargau" style="height:36px;opacity:0.55;filter:grayscale(100%)" />
-          <img src="Bilder/logo-propbase.png" alt="PropBase" style="height:32px;opacity:0.55;filter:grayscale(100%)" />
+          <img src="Bilder/logo-svit.svg" alt="SVIT Aargau" style="height:36px;opacity:0.55;filter:grayscale(100%)" loading="lazy" />
+          <img src="Bilder/logo-propbase.png" alt="PropBase" style="height:32px;opacity:0.55;filter:grayscale(100%)" loading="lazy" />
         </div>
       </div>
       <div class="footer__bottom">
@@ -212,6 +213,12 @@
     toggle.addEventListener('click', () => {
       toggle.classList.toggle('open');
       mobile.classList.toggle('open');
+    });
+    mobile.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        mobile.classList.remove('open');
+      });
     });
   </script>
 </body>

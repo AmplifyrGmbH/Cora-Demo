@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kontakt – CORA Immobilien</title>
   <meta name="description" content="Nehmen Sie Kontakt mit CORA Immobilien auf – Termin buchen oder Formular ausfüllen." />
+  <link rel="preload" href="Bilder/hero-contact.avif" as="image" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -35,7 +36,7 @@
       <a href="beratung.html" class="nav__link">Beratung</a>
       <a href="freelance.html" class="nav__link">Freelance</a>
       <a href="team.html" class="nav__link">Team</a>
-      <a href="kontakt.html" class="nav__link" style="font-weight:700;color:var(--black)">Kontakt</a>
+      <a href="kontakt.html" class="nav__link active">Kontakt</a>
     </div>
   </nav>
 
@@ -78,32 +79,6 @@
           </a>
         </div>
 
-        <div class="termin-info">
-          <div class="termin-info__item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
-            </svg>
-            <span><strong style="color:var(--black)">Telefon</strong> — <a href="tel:+41796436170">+41 79 643 61 70</a></span>
-          </div>
-          <div class="termin-info__item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
-            </svg>
-            <span><strong style="color:var(--black)">E-Mail</strong> — <a href="mailto:info@cora-immobilien.ch">info@cora-immobilien.ch</a></span>
-          </div>
-          <div class="termin-info__item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-            <span>Mo – Fr, 08:00 – 17:30 Uhr</span>
-          </div>
-          <div class="termin-info__item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
-            </svg>
-            <span>Im Rüteli 13B, 5405 Dättwil</span>
-          </div>
-        </div>
       </div>
 
       <!-- Option 2: Kontaktformular -->
@@ -160,6 +135,35 @@
 
     </div>
 
+    <!-- Kontaktdaten -->
+    <div class="termin-info termin-info-standalone" style="max-width:1200px;margin:0 auto;padding:2rem 3rem 3rem">
+      <div class="label" style="margin-bottom:1.25rem">Kontaktdaten</div>
+      <div class="termin-info__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+        </svg>
+        <span><strong style="color:var(--black)">Telefon</strong> — <a href="tel:+41796436170">+41 79 643 61 70</a></span>
+      </div>
+      <div class="termin-info__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+        </svg>
+        <span><strong style="color:var(--black)">E-Mail</strong> — <a href="mailto:info@cora-immobilien.ch">info@cora-immobilien.ch</a></span>
+      </div>
+      <div class="termin-info__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <span>Mo – Fr, 08:00 – 17:30 Uhr</span>
+      </div>
+      <div class="termin-info__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+        </svg>
+        <span>Im Rüteli 13B, 5405 Dättwil</span>
+      </div>
+    </div>
+
   </main>
 
   <!-- Footer -->
@@ -199,8 +203,8 @@
       <div style="padding:1.75rem 0;border-top:1px solid rgba(0,0,0,0.08);border-bottom:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap">
         <span style="font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray-400)">Mitgliedschaften & Partner</span>
         <div style="display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap">
-          <img src="Bilder/logo-svit.svg" alt="SVIT Aargau" style="height:36px;opacity:0.55;filter:grayscale(100%)" />
-          <img src="Bilder/logo-propbase.png" alt="PropBase" style="height:32px;opacity:0.55;filter:grayscale(100%)" />
+          <img src="Bilder/logo-svit.svg" alt="SVIT Aargau" style="height:36px;opacity:0.55;filter:grayscale(100%)" loading="lazy" />
+          <img src="Bilder/logo-propbase.png" alt="PropBase" style="height:32px;opacity:0.55;filter:grayscale(100%)" loading="lazy" />
         </div>
       </div>
       <div class="footer__bottom">
@@ -225,6 +229,12 @@
     toggle.addEventListener('click', () => {
       toggle.classList.toggle('open');
       mobile.classList.toggle('open');
+    });
+    mobile.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        mobile.classList.remove('open');
+      });
     });
   </script>
 </body>

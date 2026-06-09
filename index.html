@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CORA Immobilien – Immobilienmanagement mit Herz</title>
   <meta name="description" content="CORA Immobilien bietet professionelles Immobilienmanagement in der Schweiz – persönlich, ehrlich und kompetent. Bewirtschaftung, Vermietung, Verkauf und Beratung." />
+  <link rel="preload" href="Bilder/hero-startseite.jpg" as="image" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -35,7 +36,7 @@
       <a href="beratung.html" class="nav__link">Beratung</a>
       <a href="freelance.html" class="nav__link">Freelance</a>
       <a href="team.html" class="nav__link">Team</a>
-      <a href="kontakt.html" class="nav__link" style="font-weight:700;color:var(--black)">Kontakt</a>
+      <a href="kontakt.html" class="nav__link">Kontakt</a>
     </div>
   </nav>
 
@@ -46,12 +47,7 @@
       <div class="hero-full__bg" style="background-image: url('Bilder/hero-startseite.jpg')"></div>
       <div class="hero-full__overlay"></div>
 
-      <div class="hero-full__badge">
-        <div class="hero-full__badge-number">15+</div>
-        <div class="hero-full__badge-label">Jahre Erfahrung</div>
-      </div>
-
-      <div class="hero-full__content">
+<div class="hero-full__content">
         <div class="hero-full__eyebrow">
           <span class="label">Immobilienverwaltung · Schweiz</span>
         </div>
@@ -176,7 +172,7 @@
         <div class="team-grid">
           <div class="team-member">
             <div class="team-member__photo">
-              <img src="Bilder/Maxie.png" alt="Maxie Kücük-Richter" style="object-position: 25% center;" />
+              <img src="Bilder/Maxie.jpg" alt="Maxie Kücük-Richter" style="object-position: 25% center;" loading="lazy" />
             </div>
             <div class="team-member__name">Maxie Kücük-Richter</div>
             <div class="team-member__role">Immobilienbewirtschafterin mit eidg. FA</div>
@@ -199,7 +195,7 @@
 
           <div class="team-member">
             <div class="team-member__photo">
-              <img src="Bilder/Thierry.png" alt="Thierry Gmerek" />
+              <img src="Bilder/Thierry.jpg" alt="Thierry Gmerek" loading="lazy" />
             </div>
             <div class="team-member__name">Thierry Gmerek</div>
             <div class="team-member__role">Projektmanagement & Finanzierung</div>
@@ -222,7 +218,7 @@
 
           <div class="team-member">
             <div class="team-member__photo">
-              <img src="Bilder/Fabienne.jpg" alt="Fabienne Vis" style="object-position: 25% center;" />
+              <img src="Bilder/Fabienne.jpg" alt="Fabienne Vis" style="object-position: 25% center;" loading="lazy" />
             </div>
             <div class="team-member__name">Fabienne Vis</div>
             <div class="team-member__role">Immobilienbewirtschaftung</div>
@@ -300,8 +296,8 @@
       <div style="padding:1.75rem 0;border-top:1px solid rgba(0,0,0,0.08);border-bottom:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap">
         <span style="font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray-400)">Mitgliedschaften & Partner</span>
         <div style="display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap">
-          <img src="Bilder/logo-svit.svg" alt="SVIT Aargau" style="height:36px;opacity:0.55;filter:grayscale(100%)" />
-          <img src="Bilder/logo-propbase.png" alt="PropBase" style="height:32px;opacity:0.55;filter:grayscale(100%)" />
+          <img src="Bilder/logo-svit.svg" alt="SVIT Aargau" style="height:36px;opacity:0.55;filter:grayscale(100%)" loading="lazy" />
+          <img src="Bilder/logo-propbase.png" alt="PropBase" style="height:32px;opacity:0.55;filter:grayscale(100%)" loading="lazy" />
         </div>
       </div>
       <div class="footer__bottom">
@@ -333,6 +329,12 @@
     toggle.addEventListener('click', () => {
       toggle.classList.toggle('open');
       mobile.classList.toggle('open');
+    });
+    mobile.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        mobile.classList.remove('open');
+      });
     });
   </script>
 
