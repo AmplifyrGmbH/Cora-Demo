@@ -1544,24 +1544,15 @@ a:hover .arrow { transform: translateX(4px); }
   inset: 0;
   background-size: cover;
   background-position: center;
-  transform: scale(1.03);
   z-index: 0;
-  transition: transform 8s ease;
-}
-
-.hero-full:hover .hero-full__bg {
-  transform: scale(1.0);
 }
 
 .hero-full__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.5) 0%,
-    rgba(0,0,0,0.15) 50%,
-    rgba(0,0,0,0.0) 100%
-  );
+  background:
+    linear-gradient(to top right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.0) 70%),
+    linear-gradient(to right, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.0) 55%);
   z-index: 1;
 }
 
@@ -1591,7 +1582,7 @@ a:hover .arrow { transform: translateX(4px); }
   color: var(--white);
   margin-bottom: 1.5rem;
   max-width: 820px;
-  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  text-shadow: 0 2px 30px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.5);
 }
 
 .hero-full__title em {
@@ -1605,7 +1596,7 @@ a:hover .arrow { transform: translateX(4px); }
   max-width: 480px;
   line-height: 1.75;
   margin-bottom: 2.5rem;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+  text-shadow: 0 1px 12px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5);
 }
 
 .hero-full__actions {
@@ -1979,4 +1970,53 @@ a:hover .arrow { transform: translateX(4px); }
   .page-hero-full__title { font-size: 2.5rem; }
   .scroll-hint { display: none; }
   .page-hero-split .page-hero-full__title { font-size: 1.4rem; }
+}
+
+/* ── WhatsApp Button ────────────────────────── */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(17,17,17,0.88);
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  overflow: hidden;
+  max-width: 2.6rem;
+  transition: max-width 0.3s ease, gap 0.3s ease, box-shadow 0.2s;
+  white-space: nowrap;
+}
+.whatsapp-btn:hover {
+  max-width: 160px;
+  gap: 0.5rem;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.28);
+}
+.whatsapp-btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: #25D366;
+}
+.whatsapp-btn span {
+  opacity: 0;
+  transition: opacity 0.15s ease 0.15s;
+}
+.whatsapp-btn:hover span {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .whatsapp-btn {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
 }

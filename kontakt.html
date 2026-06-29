@@ -52,87 +52,55 @@
       </div>
     </section>
 
-    <!-- Zwei Optionen -->
-    <div class="kontakt-options">
+    <!-- Kontaktformular -->
+    <div style="max-width:860px;margin:0 auto;padding:3rem 2rem 2rem">
+      <div class="kontakt-option__title" style="font-size:1.6rem;font-weight:700;color:var(--black);margin-bottom:0.5rem">Kontaktformular</div>
+      <p style="font-size:1rem;color:var(--gray-600);margin-bottom:2rem">
+        Schildern Sie uns Ihr Anliegen – wir melden uns innert 24 Stunden bei Ihnen.
+      </p>
 
-      <!-- Option 1: Termin buchen -->
-      <div class="kontakt-option">
-        <div class="kontakt-option__label">Option 01</div>
-        <div class="kontakt-option__title">Direkt einen Termin buchen</div>
-        <p class="kontakt-option__text">
-          Wählen Sie einen freien Termin und sprechen Sie direkt mit uns –
-          telefonisch oder vor Ort. Unkompliziert und ohne Wartezeit.
-        </p>
-
-        <div class="termin-card">
-          <div class="termin-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/>
-            </svg>
+      <form class="contact-form" action="mailto:info@cora-immobilien.ch" method="post" enctype="text/plain">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="vorname">Vorname *</label>
+            <input type="text" id="vorname" name="vorname" placeholder="Max" required />
           </div>
-          <div>
-            <div style="font-size:0.95rem;font-weight:600;color:var(--black);margin-bottom:0.25rem">Online-Termin buchen</div>
-            <div style="font-size:0.85rem;color:var(--gray-600)">Ersatgespräch · 30 Minuten · Zoom oder Telefon</div>
+          <div class="form-group">
+            <label for="nachname">Nachname *</label>
+            <input type="text" id="nachname" name="nachname" placeholder="Mustermann" required />
           </div>
-          <a href="tel:+41796436170" class="btn">
-            Termin vereinbaren <span class="arrow">→</span>
-          </a>
         </div>
-
-      </div>
-
-      <!-- Option 2: Kontaktformular -->
-      <div class="kontakt-option">
-        <div class="kontakt-option__label">Option 02</div>
-        <div class="kontakt-option__title">Kontaktformular ausfüllen</div>
-        <p class="kontakt-option__text">
-          Schildern Sie uns Ihr Anliegen – wir melden uns innert 24 Stunden bei Ihnen.
-        </p>
-
-        <form class="contact-form" action="mailto:info@cora-immobilien.ch" method="post" enctype="text/plain">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="vorname">Vorname *</label>
-              <input type="text" id="vorname" name="vorname" placeholder="Max" required />
-            </div>
-            <div class="form-group">
-              <label for="nachname">Nachname *</label>
-              <input type="text" id="nachname" name="nachname" placeholder="Mustermann" required />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">E-Mail *</label>
-              <input type="email" id="email" name="email" placeholder="max@mustermann.ch" required />
-            </div>
-            <div class="form-group">
-              <label for="telefon">Telefon</label>
-              <input type="tel" id="telefon" name="telefon" placeholder="+41 79 000 00 00" />
-            </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">E-Mail *</label>
+            <input type="email" id="email" name="email" placeholder="max@mustermann.ch" required />
           </div>
           <div class="form-group">
-            <label for="anliegen">Anliegen</label>
-            <select id="anliegen" name="anliegen">
-              <option value="" disabled selected>Bitte wählen …</option>
-              <option value="bewirtschaftung">Bewirtschaftung</option>
-              <option value="vermietung">Vermietung</option>
-              <option value="verkauf">Verkauf</option>
-              <option value="beratung">Beratung & Bauherrenvertretung</option>
-              <option value="freelance">Freelance & Stellvertretung</option>
-              <option value="sonstiges">Sonstiges</option>
-            </select>
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="+41 79 000 00 00" />
           </div>
-          <div class="form-group">
-            <label for="nachricht">Nachricht *</label>
-            <textarea id="nachricht" name="nachricht" placeholder="Beschreiben Sie kurz Ihr Anliegen …" required></textarea>
-          </div>
-          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-top:0.5rem">
-            <span style="font-size:0.8rem;color:var(--gray-400)">* Pflichtfelder</span>
-            <button type="submit" class="btn btn--filled">Nachricht senden <span class="arrow">→</span></button>
-          </div>
-        </form>
-      </div>
-
+        </div>
+        <div class="form-group">
+          <label for="anliegen">Anliegen</label>
+          <select id="anliegen" name="anliegen">
+            <option value="" disabled selected>Bitte wählen …</option>
+            <option value="bewirtschaftung">Bewirtschaftung</option>
+            <option value="vermietung">Vermietung</option>
+            <option value="verkauf">Verkauf</option>
+            <option value="beratung">Beratung & Bauherrenvertretung</option>
+            <option value="freelance">Freelance & Stellvertretung</option>
+            <option value="sonstiges">Sonstiges</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="nachricht">Nachricht *</label>
+          <textarea id="nachricht" name="nachricht" placeholder="Beschreiben Sie kurz Ihr Anliegen …" required style="min-height:180px"></textarea>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-top:0.5rem">
+          <span style="font-size:0.8rem;color:var(--gray-400)">* Pflichtfelder</span>
+          <button type="submit" class="btn btn--filled">Nachricht senden <span class="arrow">→</span></button>
+        </div>
+      </form>
     </div>
 
     <!-- Kontaktdaten -->
@@ -172,7 +140,7 @@
       <div class="footer__top">
         <div>
           <div class="footer__brand-name">CORA Immobilien</div>
-          <p class="footer__brand-text">Persönliches Immobilienmanagement mit Erfahrung, Ehrlichkeit und Engagement – für Eigentümer und Mieter in der ganzen Schweiz.</p>
+          <p class="footer__brand-text">Persönliches Immobilienmanagement mit Erfahrung, Ehrlichkeit und Engagement – für Eigentümer und Mieter in Zürich und Aargau.</p>
         </div>
         <div>
           <div class="footer__col-title">Leistungen</div>
@@ -217,6 +185,10 @@
     </div>
   </footer>
 
+  <a href="https://wa.me/41565520130" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.5l5.797-1.452A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.853 0-3.601-.5-5.112-1.373l-.364-.217-3.44.862.92-3.353-.237-.38A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    <span>WhatsApp</span>
+  </a>
   <script>
     const nav = document.querySelector('.nav');
     const toggle = document.getElementById('navToggle');
