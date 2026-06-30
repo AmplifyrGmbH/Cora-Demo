@@ -1955,6 +1955,8 @@ a:hover .arrow { transform: translateX(4px); }
   .nav--scrolled { backdrop-filter: none; }
   .nav--glass .nav__logo,
   .nav--glass .nav__links { backdrop-filter: none; }
+  .service-card:hover { transform: none; box-shadow: none; }
+  .service-card:hover::before { opacity: 0; }
 }
 
 @media (max-width: 480px) {
