@@ -1,3 +1,18 @@
+# Clean URLs: .html-Endung aus URL entfernen
+RewriteEngine On
+
+# /seite.html aufgerufen -> auf /seite umleiten (301, kein doppelter Content)
+RewriteCond %{THE_REQUEST} \s/+([^?\s]+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# /seite angefragt -> intern seite.html ausliefern
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^.]+)$ $1.html [L]
+
+# Eigene 404-Seite (falls vorhanden)
+ErrorDocument 404 /404.html
+
 # Gzip Komprimierung
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript image/svg+xml text/plain

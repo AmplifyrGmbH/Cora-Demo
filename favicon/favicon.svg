@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <rect width="500" height="500" fill="white"/>
+  <!-- Linkes Gebäude (Parallelogramm-artig) -->
+  <polygon points="55,200 235,75 235,460 55,460" fill="none" stroke="black" stroke-width="28" stroke-linejoin="round"/>
+  <!-- Rechtes Gebäude (mit Knick oben) -->
+  <polygon points="280,60 445,180 445,430 280,430" fill="none" stroke="black" stroke-width="28" stroke-linejoin="round"/>
+</svg>

@@ -159,7 +159,7 @@ a:hover .arrow { transform: translateX(4px); }
 }
 
 .nav__logo img {
-  height: 56px;
+  height: 72px;
   width: auto;
   filter: drop-shadow(0 1px 4px rgba(255,255,255,0.3));
   transition: filter 0.35s ease;
@@ -186,7 +186,7 @@ a:hover .arrow { transform: translateX(4px); }
 }
 
 .nav--glass .nav__logo img {
-  height: 48px;
+  height: 64px;
 }
 
 .nav--glass .nav__links {
@@ -1981,35 +1981,55 @@ a:hover .arrow { transform: translateX(4px); }
   display: flex;
   align-items: center;
   gap: 0;
-  background: rgba(17,17,17,0.88);
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   color: var(--white);
   text-decoration: none;
   padding: 0.6rem 0.75rem;
-  border-radius: 8px;
+  border-radius: 14px;
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.01em;
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.28);
+  box-shadow:
+    0 4px 24px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.35),
+    inset 0 -1px 0 rgba(0,0,0,0.08);
   overflow: hidden;
   max-width: 2.6rem;
-  transition: max-width 0.3s ease, gap 0.3s ease, box-shadow 0.2s;
+  transition: max-width 0.35s ease, gap 0.35s ease, box-shadow 0.2s, background 0.2s;
   white-space: nowrap;
+}
+.whatsapp-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.0) 60%);
+  pointer-events: none;
 }
 .whatsapp-btn:hover {
   max-width: 160px;
   gap: 0.5rem;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.28);
+  background: rgba(255,255,255,0.18);
+  box-shadow:
+    0 6px 30px rgba(0,0,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.45),
+    inset 0 -1px 0 rgba(0,0,0,0.08);
 }
 .whatsapp-btn svg {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
   color: #25D366;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
 }
 .whatsapp-btn span {
   opacity: 0;
-  transition: opacity 0.15s ease 0.15s;
+  transition: opacity 0.15s ease 0.18s;
+  color: #25D366;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 .whatsapp-btn:hover span {
   opacity: 1;
@@ -2019,4 +2039,14 @@ a:hover .arrow { transform: translateX(4px); }
     bottom: 1.25rem;
     right: 1.25rem;
   }
+}
+
+/* Accessibility: focus-visible */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
 }
