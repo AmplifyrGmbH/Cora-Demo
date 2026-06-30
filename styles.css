@@ -1648,13 +1648,7 @@ a:hover .arrow { transform: translateX(4px); }
   background-size: cover;
   background-position: center;
   filter: grayscale(20%) brightness(1.0);
-  transform: scale(1.03);
   z-index: 0;
-  transition: transform 8s ease;
-}
-
-.page-hero-full:hover .page-hero-full__bg {
-  transform: scale(1.0);
 }
 
 /* ── Split Hero (50/50) ─────────────────────── */
