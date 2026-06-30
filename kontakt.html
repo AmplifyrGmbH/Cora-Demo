@@ -77,7 +77,10 @@
         Schildern Sie uns Ihr Anliegen – wir melden uns innert 24 Stunden bei Ihnen.
       </p>
 
-      <form class="contact-form" action="mailto:info@cora-immobilien.ch" method="post" enctype="text/plain">
+      <form class="contact-form" id="contactForm">
+        <input type="hidden" name="access_key" value="7c3eeaf6-73a7-48a2-ba3f-42803f97061d">
+        <input type="hidden" name="subject" value="Neue Kontaktanfrage – CORA Immobilien">
+        <input type="hidden" name="from_name" value="CORA Immobilien Website">
         <div class="form-row">
           <div class="form-group">
             <label for="vorname">Vorname *</label>
@@ -116,9 +119,41 @@
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-top:0.5rem">
           <span style="font-size:0.8rem;color:var(--gray-400)">* Pflichtfelder</span>
-          <button type="submit" class="btn btn--filled">Nachricht senden <span class="arrow">→</span></button>
+          <button type="submit" class="btn btn--filled" id="submitBtn">Nachricht senden <span class="arrow">→</span></button>
         </div>
+        <div id="formResult" style="display:none;margin-top:1rem;padding:1rem;border-radius:8px;font-size:0.9rem;font-weight:500"></div>
       </form>
+
+      <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const btn = document.getElementById('submitBtn');
+          const result = document.getElementById('formResult');
+          btn.disabled = true;
+          btn.textContent = 'Wird gesendet …';
+          const data = Object.fromEntries(new FormData(this));
+          const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          const json = await res.json();
+          result.style.display = 'block';
+          if (json.success) {
+            result.style.background = '#f0faf4';
+            result.style.color = '#1a6b3a';
+            result.textContent = 'Vielen Dank! Ihre Nachricht wurde gesendet. Wir melden uns bald bei Ihnen.';
+            this.reset();
+            btn.textContent = 'Gesendet ✓';
+          } else {
+            result.style.background = '#fff0f0';
+            result.style.color = '#8b1a1a';
+            result.textContent = 'Fehler beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@cora-immobilien.ch.';
+            btn.disabled = false;
+            btn.innerHTML = 'Nachricht senden <span class="arrow">→</span>';
+          }
+        });
+      </script>
     </div>
 
     <!-- Kontaktdaten -->
