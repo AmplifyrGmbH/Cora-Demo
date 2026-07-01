@@ -1698,7 +1698,7 @@ a:hover .arrow { transform: translateX(4px); }
   .page-hero-split {
     grid-template-columns: 1fr;
     grid-template-rows: 42vh 1fr;
-    height: 100dvh;
+    height: 100svh;
     min-height: auto;
   }
   .page-hero-split__right {
