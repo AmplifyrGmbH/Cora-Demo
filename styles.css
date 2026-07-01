@@ -1969,6 +1969,17 @@ a:hover .arrow { transform: translateX(4px); }
   .nav--glass .nav__links { backdrop-filter: none; }
   .service-card:hover { transform: none; box-shadow: none; }
   .service-card:hover::before { opacity: 0; }
+
+  /* iOS Safari Fix: verhindert Rubber-Band-Zoom beim Scrollen */
+  html, body { overscroll-behavior-y: none; }
+
+  /* Stabiler Viewport: svh ändert sich nicht beim Ein-/Ausblenden der Safari-Leiste */
+  .hero-full,
+  .page-hero-full {
+    min-height: 100svh;
+    height: 100svh;
+    contain: layout paint;
+  }
 }
 
 @media (max-width: 480px) {
