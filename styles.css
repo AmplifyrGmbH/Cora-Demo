@@ -165,7 +165,8 @@ a:hover .arrow { transform: translateX(4px); }
   transition: filter 0.35s ease;
 }
 
-.nav--scrolled .nav__logo img {
+.nav--scrolled .nav__logo img,
+.nav--light .nav__logo img {
   filter: none;
 }
 
