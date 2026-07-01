@@ -1955,6 +1955,7 @@ a:hover .arrow { transform: translateX(4px); }
   .page-hero-full__bg { transform: none; transition: none; }
   .hero-full:hover .hero-full__bg,
   .page-hero-full:hover .page-hero-full__bg { transform: none; }
+  .nav { transition: none; }
   .nav--scrolled { backdrop-filter: none; }
   .nav--glass .nav__logo,
   .nav--glass .nav__links { backdrop-filter: none; }
