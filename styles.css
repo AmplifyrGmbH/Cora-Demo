@@ -161,7 +161,7 @@ a:hover .arrow { transform: translateX(4px); }
 .nav__logo img {
   height: 72px;
   width: auto;
-  filter: drop-shadow(0 1px 4px rgba(255,255,255,0.3));
+  filter: invert(1);
   transition: filter 0.35s ease;
 }
 
@@ -187,6 +187,7 @@ a:hover .arrow { transform: translateX(4px); }
 
 .nav--glass .nav__logo img {
   height: 64px;
+  filter: invert(1);
 }
 
 .nav--glass .nav__links {
