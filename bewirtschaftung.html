@@ -26,11 +26,6 @@
   <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
   <meta name="theme-color" content="#111111">
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    @media (max-width: 768px) {
-      .page-hero-full { background-image: url('Bilder/hero-bewirtschaftung-mobile.jpg') !important; }
-    }
-  </style>
 </head>
 <body>
 
@@ -67,7 +62,11 @@
   <main>
 
     <!-- Page Hero -->
-    <section class="page-hero-full" style="background-image: url('Bilder/hero-bewirtschaftung.jpg')">
+    <section class="page-hero-full">
+      <picture>
+        <source srcset="Bilder/hero-bewirtschaftung-mobile.jpg" media="(max-width: 768px)">
+        <img class="page-hero-full__bg" src="Bilder/hero-bewirtschaftung.jpg" alt="" aria-hidden="true">
+      </picture>
       <div class="page-hero-full__overlay"></div>
       <div class="page-hero-full__inner">
 
