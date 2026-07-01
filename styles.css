@@ -1538,19 +1538,8 @@ a:hover .arrow { transform: translateX(4px); }
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-}
-
-.hero-full__bg {
-  position: absolute;
-  inset: 0;
   background-size: cover;
   background-position: center;
-  z-index: 0;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  will-change: transform;
 }
 
 .hero-full__overlay {
@@ -1647,15 +1636,9 @@ a:hover .arrow { transform: translateX(4px); }
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-}
-
-.page-hero-full__bg {
-  position: absolute;
-  inset: 0;
   background-size: cover;
   background-position: center;
   filter: grayscale(20%) brightness(1.0);
-  z-index: 0;
 }
 
 /* ── Split Hero (50/50) ─────────────────────── */
