@@ -642,14 +642,14 @@ a:hover .arrow { transform: translateX(4px); }
 }
 
 .service-detail__intro {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--gray-600);
   line-height: 1.8;
   margin-bottom: var(--spacing-md);
 }
 
 .service-detail__body {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--gray-600);
   line-height: 1.75;
 }
@@ -1211,7 +1211,7 @@ a:hover .arrow { transform: translateX(4px); }
 }
 
 .process-list__text {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--gray-600);
   line-height: 1.7;
 }
