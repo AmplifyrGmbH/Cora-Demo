@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vermietung – CORA Immobilien</title>
   <meta name="description" content="Von der Marktanalyse bis zur Schlüsselübergabe – CORA Immobilien begleitet Sie durch den gesamten Vermietungsprozess." />
-  <link rel="preload" href="Bilder/hero-vermietung.jpg" as="image" />
+  <link rel="preload" href="Bilder/hero-vermietung.jpg" as="image" media="(min-width: 769px)" />
+  <link rel="preload" href="Bilder/hero-vermietung-mobile.jpg" as="image" media="(max-width: 768px)" />
   <!-- SEO & Social -->
   <link rel="canonical" href="https://cora-immobilien.ch/vermietung">
   <meta name="robots" content="index, follow">
@@ -62,7 +63,10 @@
 
     <!-- Page Hero -->
     <section class="page-hero-full">
-      <img class="page-hero-full__bg" src="Bilder/hero-vermietung.jpg" alt="" aria-hidden="true">
+      <picture>
+        <source srcset="Bilder/hero-vermietung-mobile.jpg" media="(max-width: 768px)">
+        <img class="page-hero-full__bg" src="Bilder/hero-vermietung.jpg" alt="" aria-hidden="true">
+      </picture>
       <div class="page-hero-full__overlay"></div>
       <div class="page-hero-full__inner">
         <div class="page-hero-full__label"><span class="label">Leistung 02</span></div>
