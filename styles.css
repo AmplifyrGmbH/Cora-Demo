@@ -332,11 +332,12 @@ a:hover .arrow { transform: translateX(4px); }
   border-bottom: 1px solid rgba(0,0,0,0.06);
   padding: 1.5rem 2rem 2rem;
   flex-direction: column;
+  align-items: center;
   gap: 1.25rem;
   z-index: 99;
 }
 .nav__mobile.open { display: flex; }
-.nav__mobile .nav__link { font-size: 1rem; color: var(--gray-800); }
+.nav__mobile .nav__link { font-size: 1rem; color: var(--gray-800); text-align: center; }
 .nav__mobile .nav__link.active { color: var(--black); font-weight: 600; }
 
 /* ── Hero (Homepage) ────────────────────────── */
