@@ -2025,6 +2025,14 @@ a:hover .arrow { transform: translateX(4px); }
     border-top: 1px solid var(--gray-200);
     background: var(--white);
   }
+  .partners-mobile-strip__text {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    text-align: center;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 300px;
+  }
   .partners-mobile-strip__label {
     font-size: 0.65rem;
     font-weight: 600;
