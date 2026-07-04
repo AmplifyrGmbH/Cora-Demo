@@ -1599,7 +1599,7 @@ a:hover .arrow { transform: translateX(4px); }
 
 .hero-full__subtitle {
   font-size: 1.05rem;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,1);
   max-width: 480px;
   line-height: 1.75;
   margin-bottom: 2.5rem;
