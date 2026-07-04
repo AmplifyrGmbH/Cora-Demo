@@ -1746,6 +1746,17 @@ a:hover .arrow { transform: translateX(4px); }
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .page-hero-full__overlay {
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.72) 0%,
+      rgba(0,0,0,0.35) 50%,
+      rgba(0,0,0,0.15) 100%
+    );
+  }
+}
+
 .page-hero-full__inner {
   position: relative;
   z-index: 2;
@@ -1784,6 +1795,7 @@ a:hover .arrow { transform: translateX(4px); }
   color: var(--white);
   max-width: 800px;
   margin-bottom: 1.5rem;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.65), 0 1px 4px rgba(0,0,0,0.4);
 }
 
 .page-hero-full__subtitle {
@@ -1791,6 +1803,7 @@ a:hover .arrow { transform: translateX(4px); }
   color: rgba(255,255,255,0.7);
   max-width: 560px;
   line-height: 1.75;
+  text-shadow: 0 1px 12px rgba(0,0,0,0.6), 0 1px 3px rgba(0,0,0,0.4);
 }
 
 .page-hero-full__actions {
