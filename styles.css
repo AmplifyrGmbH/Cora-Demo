@@ -1918,7 +1918,7 @@ a:hover .arrow { transform: translateX(4px); }
   .hero-full__subtitle { font-size: 0.875rem; margin-bottom: 1.25rem; line-height: 1.6; }
   .hero-full__eyebrow { margin-bottom: 0.75rem; }
   .hero-full__actions { gap: 1rem; }
-  .service-card { padding: 1.1rem 1.25rem; }
+  .service-card { padding: 1.1rem 1.25rem; align-items: center; text-align: center; }
   .service-card__text { display: none; }
   .service-card__number { margin-bottom: 0.4rem; }
   .service-card__title { margin-bottom: 0.5rem; font-size: 1rem; }
