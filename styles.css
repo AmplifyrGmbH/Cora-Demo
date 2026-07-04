@@ -1681,6 +1681,11 @@ a:hover .arrow { transform: translateX(4px); }
 
 .page-hero-split__left .page-hero-full__title {
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  text-shadow: none;
+}
+
+.page-hero-split__left .page-hero-full__subtitle {
+  text-shadow: none;
 }
 
 .page-hero-split__right {
