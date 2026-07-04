@@ -2010,6 +2010,40 @@ a:hover .arrow { transform: translateX(4px); }
   .page-hero-split .page-hero-full__title { font-size: 1.4rem; }
 }
 
+/* ── Partner Strip (mobile only) ───────────── */
+.partners-mobile-strip {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .partners-mobile-strip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 2rem 1.5rem;
+    border-top: 1px solid var(--gray-200);
+    background: var(--white);
+  }
+  .partners-mobile-strip__label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+  }
+  .partners-mobile-strip__logos {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .partners-mobile-strip__logos img {
+    height: 32px;
+    opacity: 0.55;
+    filter: grayscale(100%);
+  }
+}
+
 /* ── WhatsApp Button ────────────────────────── */
 .whatsapp-btn {
   position: fixed;
