@@ -1552,6 +1552,11 @@ a:hover .arrow { transform: translateX(4px); }
   object-position: center;
   z-index: 0;
   pointer-events: none;
+  /* Eigene Compositing-Ebene: verhindert Repaint-Zoom beim Scrollstart */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
 }
 
 .hero-full__overlay {
@@ -1660,6 +1665,11 @@ a:hover .arrow { transform: translateX(4px); }
   z-index: 0;
   pointer-events: none;
   filter: grayscale(20%) brightness(1.0);
+  /* Eigene Compositing-Ebene: verhindert Repaint-Zoom beim Scrollstart */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
 }
 
 /* ── Split Hero (50/50) ─────────────────────── */
@@ -1842,6 +1852,9 @@ a:hover .arrow { transform: translateX(4px); }
 }
 
 @media (max-width: 768px) {
+  /* Smooth scroll deaktivieren – verhindert Feder-Effekt beim Scrollstart auf iOS */
+  html { scroll-behavior: auto; }
+
   :root { --spacing-xl: 5rem; --spacing-lg: 3rem; --nav-height: 60px; }
 
   .nav__links,
@@ -1983,9 +1996,9 @@ a:hover .arrow { transform: translateX(4px); }
 
   /* Performance: teure Effekte auf Mobile deaktivieren */
   .hero-full__bg,
-  .page-hero-full__bg { transform: none; transition: none; }
+  .page-hero-full__bg { transition: none; }
   .hero-full:hover .hero-full__bg,
-  .page-hero-full:hover .page-hero-full__bg { transform: none; }
+  .page-hero-full:hover .page-hero-full__bg { transform: translateZ(0); }
   .nav { transition: none; }
   .nav--scrolled { backdrop-filter: none; }
   .nav--glass .nav__logo,
