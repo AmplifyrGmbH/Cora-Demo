@@ -2014,6 +2014,31 @@ a:hover .arrow { transform: translateX(4px); }
   .page-hero-split .page-hero-full__title { font-size: 1.4rem; }
 }
 
+/* ── Touch Device: Hero Zoom Fix (Ansatz 1) ─── */
+@media (hover: none) and (pointer: coarse) {
+  /* Smooth scroll deaktivieren – verhindert den Feder-Effekt beim Scrollstart auf iOS */
+  html { scroll-behavior: auto; }
+
+  /* Overscroll global deaktivieren (nicht nur per max-width) */
+  html, body { overscroll-behavior: none; }
+
+  /* Hero-Hintergrundbilder auf eigene GPU-Compositing-Ebene heben.
+     Verhindert den kurzen Repaint-Zoom, den iOS Safari beim ersten Scroll-Frame
+     erzeugt wenn das Element noch nicht composited ist. */
+  .hero-full__bg,
+  .page-hero-full__bg {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  /* Sicherstellen dass kein Hover-State auf Touch versehentlich Scale triggert */
+  .hero-full:hover .hero-full__bg,
+  .page-hero-full:hover .page-hero-full__bg {
+    transform: translateZ(0);
+  }
+}
+
 /* ── FAQ Accordion ──────────────────────────── */
 .faq {
   max-width: 760px;
