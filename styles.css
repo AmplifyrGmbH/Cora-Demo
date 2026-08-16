@@ -1541,6 +1541,8 @@ a:hover .arrow { transform: translateX(4px); }
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+  /* Container auf eigene GPU-Layer: verhindert Zoom-Artefakt beim Scrollstart */
+  transform: translateZ(0);
 }
 
 .hero-full__bg {
@@ -1552,10 +1554,6 @@ a:hover .arrow { transform: translateX(4px); }
   object-position: center;
   z-index: 0;
   pointer-events: none;
-  /* Eigene Compositing-Ebene: verhindert Repaint-Zoom beim Scrollstart */
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
 
 .hero-full__overlay {
@@ -1652,6 +1650,8 @@ a:hover .arrow { transform: translateX(4px); }
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+  /* Container auf eigene GPU-Layer: verhindert Zoom-Artefakt beim Scrollstart */
+  transform: translateZ(0);
 }
 
 .page-hero-full__bg {
@@ -1664,10 +1664,6 @@ a:hover .arrow { transform: translateX(4px); }
   z-index: 0;
   pointer-events: none;
   filter: grayscale(20%) brightness(1.0);
-  /* Eigene Compositing-Ebene: verhindert Repaint-Zoom beim Scrollstart */
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
 
 /* ── Split Hero (50/50) ─────────────────────── */
@@ -1995,8 +1991,6 @@ a:hover .arrow { transform: translateX(4px); }
   /* Performance: teure Effekte auf Mobile deaktivieren */
   .hero-full__bg,
   .page-hero-full__bg { transition: none; }
-  .hero-full:hover .hero-full__bg,
-  .page-hero-full:hover .page-hero-full__bg { transform: translateZ(0); }
   .nav { transition: none; }
   .nav--scrolled { backdrop-filter: none; }
   .nav--glass .nav__logo,
@@ -2043,10 +2037,10 @@ a:hover .arrow { transform: translateX(4px); }
     -webkit-backface-visibility: hidden;
   }
 
-  /* Sicherstellen dass kein Hover-State auf Touch versehentlich Scale triggert */
+  /* Kein unerwünschter Scale durch simulierten Hover-State auf Touch */
   .hero-full:hover .hero-full__bg,
   .page-hero-full:hover .page-hero-full__bg {
-    transform: translateZ(0);
+    transform: none;
   }
 }
 
