@@ -1541,8 +1541,9 @@ a:hover .arrow { transform: translateX(4px); }
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  /* Container auf eigene GPU-Layer: verhindert Zoom-Artefakt beim Scrollstart */
   transform: translateZ(0);
+  /* Verhindert dass Touch-Start als Pinch/Tap-Zoom interpretiert wird */
+  touch-action: pan-y;
 }
 
 .hero-full__bg {
@@ -1650,8 +1651,9 @@ a:hover .arrow { transform: translateX(4px); }
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  /* Container auf eigene GPU-Layer: verhindert Zoom-Artefakt beim Scrollstart */
   transform: translateZ(0);
+  /* Verhindert dass Touch-Start als Pinch/Tap-Zoom interpretiert wird */
+  touch-action: pan-y;
 }
 
 .page-hero-full__bg {
