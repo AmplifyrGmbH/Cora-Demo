@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://cora-immobilien.ch/sitemap.xml
+Sitemap: https://cora-immobilien.ch/blog/sitemap.xml

@@ -2,3 +2,5 @@
 .DS_Store
 **/.DS_Store
 router.php
+node_modules/
+_blog-dist/

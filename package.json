@@ -1,0 +1,12 @@
+{
+  "name": "cora-blog-builder",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build-blog": "node build-blog.js"
+  },
+  "dependencies": {
+    "contentful": "^10.15.0",
+    "@contentful/rich-text-html-renderer": "^16.4.0"
+  }
+}
