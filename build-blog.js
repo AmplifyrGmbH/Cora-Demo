@@ -268,7 +268,7 @@ function generatePostPage(post) {
   const author = f.author || '';
   const excerpt = f.excerpt || '';
   const metaDesc = f.metaDescription || excerpt || titel;
-  const heroAsset = f.heroImage;
+  const heroAsset = Array.isArray(f.heroImage) ? f.heroImage[0] : f.heroImage;
   const heroUrl = heroAsset?.fields?.file?.url ? `https:${heroAsset.fields.file.url}` : null;
   const canonical = `${SITE_URL}/blog/${slug}.html`;
   const ogImage = heroUrl || `${SITE_URL}/og-image.png`;
@@ -322,7 +322,7 @@ function generateIndexPage(posts) {
     const slug = f.slug;
     const excerpt = f.excerpt || '';
     const dateStr = formatDate(f.publishedAt);
-    const heroAsset = f.heroImage;
+    const heroAsset = Array.isArray(f.heroImage) ? f.heroImage[0] : f.heroImage;
     const heroUrl = heroAsset?.fields?.file?.url ? `https:${heroAsset.fields.file.url}` : null;
 
     return `
